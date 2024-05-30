@@ -22,9 +22,9 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/FedericoCalzoni/EventRecorder/archive/refs/tags/v1.0.5.tar.gz",
+                    "url": "https://github.com/FedericoCalzoni/EventRecorder/archive/refs/tags/v1.0.6.tar.gz",
                     "dest": "EventRecorder",
-                    "sha256": "df4936fbf99305587e03be775e8e8a554fcbbfd83a68e54586708f2abfe45b3d"
+                    "sha256": "09d6bdf118461d759a8da72e8de7ba3e14fc596cc59a5e40f3580d0325c5d253"
                 }
             ],
             "build-commands": [

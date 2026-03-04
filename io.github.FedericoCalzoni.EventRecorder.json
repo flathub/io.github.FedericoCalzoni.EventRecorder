@@ -1,14 +1,15 @@
 {
     "app-id": "io.github.FedericoCalzoni.EventRecorder",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.7",
+    "runtime-version": "6.10",
     "sdk": "org.kde.Sdk",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "6.7",
+    "base-version": "6.10",
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
     ],
     "command": "EventRecorder.py",
+    "rename-icon": "logo",
     "finish-args": [
         "--socket=wayland",
         "--socket=fallback-x11",
@@ -28,10 +29,10 @@
                 }
             ],
             "build-commands": [
-                "install -Dm755 EventRecorder/EventRecorder/EventRecorder.py /app/bin/EventRecorder.py",
-                "install -D EventRecorder/EventRecorder/logo.png /app/share/icons/hicolor/128x128/apps/io.github.FedericoCalzoni.EventRecorder.png",
-                "install -D EventRecorder/io.github.FedericoCalzoni.EventRecorder.desktop /app/share/applications/io.github.FedericoCalzoni.EventRecorder.desktop",
-                "install -D EventRecorder/io.github.FedericoCalzoni.EventRecorder.metainfo.xml /app/share/metainfo/io.github.FedericoCalzoni.EventRecorder.metainfo.xml"
+                "install -Dm755 EventRecorder/EventRecorder/EventRecorder.py -t /app/bin/",
+                "install -Dm644 EventRecorder/EventRecorder/logo.png -t /app/share/icons/hicolor/128x128/apps/",
+                "install -Dm644 EventRecorder/${FLATPAK_ID}.desktop -t /app/share/applications/",
+                "install -Dm644 EventRecorder/${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/"
             ]
         }
     ]
